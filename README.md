@@ -18,3 +18,6 @@ Python | NLTK | TF-IDF | Logistic Regression | Streamlit
 git clone https://github.com/sujithakannan25/sentiment-analysis.git
 pip install -r requirements.txt
 streamlit run app.py
+
+## 🌐 Live Demo
+https://sentiment-analysis-sujitha.streamlit.app
