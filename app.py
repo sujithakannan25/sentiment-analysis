@@ -7,14 +7,12 @@ import nltk
 
 nltk.download('stopwords', quiet=True)
 
-# Page config
 st.set_page_config(
     page_title="💬 Sentiment Analyzer",
     page_icon="💬",
     layout="centered"
 )
 
-# Load model
 @st.cache_resource
 def load_model():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -24,7 +22,6 @@ def load_model():
 
 model, tfidf = load_model()
 
-# Clean text function
 def clean_text(text):
     stop_words = set(stopwords.words('english'))
     text = text.lower()
@@ -33,12 +30,10 @@ def clean_text(text):
                      if word not in stop_words])
     return text
 
-# Header
 st.title("💬 Sentiment Analyzer")
 st.markdown("**Built by Sujitha | AI/ML Portfolio Project**")
 st.markdown("---")
 
-# Input
 st.subheader("📝 Enter Your Review")
 user_input = st.text_area(
     "Type any product review here...",
@@ -48,7 +43,6 @@ user_input = st.text_area(
 
 st.markdown("---")
 
-# Predict
 if st.button("🔍 Analyze Sentiment", use_container_width=True):
     if user_input.strip() == "":
         st.warning("⚠️ Please enter a review!")
