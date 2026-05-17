@@ -20,4 +20,4 @@ pip install -r requirements.txt
 streamlit run app.py
 
 ## 🌐 Live Demo
-https://sentiment-analysis-sujitha.streamlit.app
+https://sujitha-sentiment-nlp.streamlit.app
